@@ -6,7 +6,7 @@
 
 set -e
 
-DRUPAL_SITE_DIR=${OPENSHIFT_DATA_DIR}sites
+DRUPAL_SITE_DIR=${OPENSHIFT_REPO_DIR}php/sites
 DRUPAL_PRIVATE_DIR=${OPENSHIFT_DATA_DIR}private
 DRUPAL_SETTINGS=${DRUPAL_SITE_DIR}/default/settings.php
 DEFAULT_PASSWORD=openshift_changeme
@@ -18,7 +18,7 @@ then
 fi
 
 #
-# Create a new Drupal site.  You can delete your ${OPENSHIFT_DATA_DIR}sites
+# Create a new Drupal site.  You can delete your ${OPENSHIFT_REPO_DIR}php/sites
 # folder to run this step again.
 #
 if [ ! -f "${DRUPAL_SITE_DIR}/default/settings.php" ]
